@@ -1,0 +1,107 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="bg-gray-200">
+  <div class="flex justify-center w-full mb-6">
+    <button
+      *ngIf="!showForm"
+      (click)="addDoctor()"
+      class="transition ease-in duration-300 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full"
+    >
+      + Add Doctor
+    </button>
+  </div>
+  <div *ngIf="showForm">
+    <div class="overlay fixed top-0 left-0 flex items-center justify-center h-screen w-screen bg-gray-500/70 z-50">
+      <div class="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+        <div class="text-white">
+          <div class="mb-8 flex flex-col items-center">
+            <img src="./assets/AFLAS.png" width="150" alt="" srcset="" />
+
+          </div>
+
+          <form [formGroup]="doctorForm" (ngSubmit)="onSubmit()">
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="nom" formControlName="nom" placeholder="Nom" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"  type="text" id="specialite" formControlName="specialite" placeholder="specialite" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="telephone" formControlName="telephone" placeholder="telephone" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="image" formControlName="image" placeholder="image" />
+            </div>
+
+
+            <div class="mt-8 flex justify-center text-lg text-black">
+              <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+<main class="w-full p-6 md:w-[calc(100%-256px)] md:ml-64 bg-gray-200 min-h-screen transition-all ">
+  <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-4 ">
+    <div class="bg-white font-semibold text-center rounded-3xl border shadow-lg p-8 max-w-xs">
+      <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="product designer">
+      <h1 class="text-lg text-gray-700"> Hamid Lmerdi </h1>
+      <h3 class="text-sm text-gray-400 "> Best Doctor </h3>
+      <p class="text-xs text-gray-400 mt-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="space-x-4 flex w-full py-4   text-center">
+      <button class=" inline-block bg-green-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-green-700 tracking-wide">Modify</button>
+      <button class="inline-block bg-red-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-red-700 tracking-wide">Delete</button>
+      </div>
+    </div>
+    <div class="bg-white font-semibold text-center rounded-3xl border shadow-lg p-8 max-w-xs">
+      <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="product designer">
+      <h1 class="text-lg text-gray-700"> Hamid Lmerdi </h1>
+      <h3 class="text-sm text-gray-400 "> Best Doctor </h3>
+      <p class="text-xs text-gray-400 mt-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="space-x-4 flex w-full py-4   text-center">
+        <button class=" inline-block bg-green-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-green-700 tracking-wide">Modify</button>
+        <button class="inline-block bg-red-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-red-700 tracking-wide">Delete</button>
+      </div>
+    </div>
+    <div class="bg-white font-semibold text-center rounded-3xl border shadow-lg p-8 max-w-xs">
+      <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="product designer">
+      <h1 class="text-lg text-gray-700"> Hamid Lmerdi </h1>
+      <h3 class="text-sm text-gray-400 "> Best Doctor </h3>
+      <p class="text-xs text-gray-400 mt-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="space-x-4 flex w-full py-4   text-center">
+        <button class=" inline-block bg-green-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-green-700 tracking-wide">Modify</button>
+        <button class="inline-block bg-red-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-red-700 tracking-wide">Delete</button>
+      </div>
+    </div>
+    <div class="bg-white font-semibold text-center rounded-3xl border shadow-lg p-8 max-w-xs">
+      <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto" src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80" alt="product designer">
+      <h1 class="text-lg text-gray-700"> Hamid Lmerdi </h1>
+      <h3 class="text-sm text-gray-400 "> Best Doctor </h3>
+      <p class="text-xs text-gray-400 mt-4"> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+      <div class="space-x-4 flex w-full py-4   text-center">
+        <button class=" inline-block bg-green-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-green-700 tracking-wide">Modify</button>
+        <button class="inline-block bg-red-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-red-700 tracking-wide">Delete</button>
+      </div>
+    </div>
+    <div *ngFor="let doctor of doctors" class="bg-white font-semibold text-center rounded-3xl border shadow-lg p-8 max-w-xs">
+      <img class="mb-3 w-32 h-32 rounded-full shadow-lg mx-auto" src="{{doctor.image}}" style="object-fit: cover;" alt="product designer">
+      <h1 class="text-lg text-gray-700"> {{doctor.nom}} </h1>
+      <h3 class="text-sm text-gray-400 "> {{doctor.specialite}} </h3>
+      <p class="text-xs text-gray-400 mt-4"> {{doctor.hopital.nom}} </p>
+      <div class="space-x-4 flex w-full py-4   text-center">
+        <button class=" inline-block bg-green-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-green-700 tracking-wide">Modify</button>
+        <button (click)="deleteDoctor(doctor.id)" class="inline-block bg-red-400 px-8 py-2 mt-8 rounded-3xl text-gray-100 font-semibold uppercase hover:bg-red-700 tracking-wide">Delete</button>
+
+      </div>
+    </div>
+
+
+  </div>
+
+</main>
+
+</div>

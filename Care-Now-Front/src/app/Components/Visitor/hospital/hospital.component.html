@@ -1,0 +1,120 @@
+<app-navbar></app-navbar>
+<!-- component -->
+<div *ngIf="Hospital" class="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12" style="background-image: url('https://malonecenter.jhu.edu/wp-content/uploads/2020/02/bigstock-The-Johns-Hopkins-Hospital-95186060-scaled.jpg')">
+  <div class="relative py-3 sm:max-w-5xl sm:mx-auto">
+    <div class="relative px-4  bg-white shadow-lg sm:rounded-3xl  bg-clip-padding bg-opacity-60 border border-gray-200" style="backdrop-filter: blur(20px);">
+      <!-- component -->
+      <!--
+        Welcome to Tailwind Play, the official Tailwind CSS playground!
+
+        Everything here works just like it does when you're running Tailwind locally
+        with a real build pipeline. You can customize your config file, use features
+        like `@apply`, or even add third-party plugins.
+
+        Feel free to play with this example if you're just learning, or trash it and
+        start from scratch if you know enough to be dangerous. Have fun!
+      -->
+      <div class="relative flex min-h-screen flex-col justify-center overflow-hidden  ">
+        <div class="w-full items-center mx-auto max-w-screen-lg">
+          <div class="group grid w-full grid-cols-2">
+            <div class="relative flex before:block before:absolute before:h-1/6 before:w-2 before:bg-stone-200 before:top-0 before:right-0 before:rounded-lg  before:transition-all group-hover:before:bg-orange-300 overflow-hidden">
+              <div class="absolute bottom-0 right-0 bg-blue-500 w-4/6 overflow-hidden flex flex-col justify-center rounded-xl group-hover:bg-sky-600 transition-all shadow-2xl">
+                <img src="https://flyerdesigner.weebly.com/uploads/1/3/0/8/130889574/g2fjnrsili_orig.jpg" alt="">
+              </div>
+
+              <div class="h-2/3 rounded-xl overflow-hidden">
+                <img src="{{Hospital.image}}" style="object-fit: cover;" class="h-full" alt="">
+              </div>
+              <a class="-rotate-90 font-bold mt-2 mb-8 r gap-2 h-16 text-2xl leading-7" href="">
+                <span>25 ans <br> D'expérience</span>
+              </a>
+
+            </div>
+            <div>
+              <div class="pl-12">
+                <h2 class="text-5xl font-medium mb-6">{{Hospital.nom}}</h2>
+                <h3 class="text-2xl font-medium mb-6">Creating the perfect temperature all year round</h3>
+                <p class="mb-6 ">energy efficient, stylish & silent both providing cooling and heating. At Zero Degree AC Limited we only use the best brands.
+                </p>
+                <h3 class="mb-4 font-semibold text-xl ">Conditioning installation packages</h3>
+                <div class="grid grid-cols-2 gap-6 justify-between mb-3">
+                  <a href="" class="flex items-center gap-3 hover:text-blue-300">
+              <span class="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+                    <span class="font-semibold">Service</span>
+                  </a>
+                  <a href="" class="flex items-center gap-3 hover:text-blue-300">
+              <span class="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+                    <span class="font-semibold">installation</span>
+                  </a>
+                </div>
+                <div class="grid grid-cols-2 gap-6 justify-between mb-3">
+                  <a href="" class="flex items-center gap-3 hover:text-blue-300">
+              <span class="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+                    <span class="font-semibold">Gold Membership</span>
+                  </a>
+                  <a href="" class="flex items-center gap-3 hover:text-blue-300">
+              <span class="h-10 w-10 rounded-full bg-blue-300 flex items-center justify-center text-white shadow-lg shadow-blue-500/30">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                </svg>
+              </span>
+                    <span class="font-semibold">Maintenance</span>
+                  </a>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="divide-y divide-gray-200 ">
+              <div class="pt-10 text-base leading-6 space-y-4 text-center  sm:text-lg sm:leading-7">
+
+                <h2 class="text-5xl font-medium mb-6">Our Doctors</h2>
+
+              </div>
+              <div class="pt-6 text-base leading-6 flex items-center justify-center font-bold sm:text-lg sm:leading-7">
+                <a href="/Doctor/{{doctor.id}}" *ngFor="let doctor of Hospital.docteurs  "  class="group mt-8 inline-flex flex-wrap items-center justify-center gap-5">
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <img class="h-20 w-22 rounded-full" src="{{doctor.image}}" alt="">
+                    <h3 class="text-xl font-semibold">{{doctor.nom}}</h3>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <img class="h-20 w-22 rounded-full" src="{{doctor.image}}" alt="">
+                    <h3 class="text-xl font-semibold">{{doctor.nom}}</h3>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <img class="h-20 w-22 rounded-full" src="{{doctor.image}}" alt="">
+                    <h3 class="text-xl font-semibold">{{doctor.nom}}</h3>
+                  </div>
+                  <div class="flex flex-col items-center justify-center gap-2">
+                    <img class="h-20 w-22 rounded-full" src="{{doctor.image}}" alt="">
+                    <h3 class="text-xl font-semibold">{{doctor.nom}}</h3>
+                  </div>
+
+
+
+
+
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

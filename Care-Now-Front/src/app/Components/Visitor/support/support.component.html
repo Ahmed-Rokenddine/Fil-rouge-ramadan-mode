@@ -1,0 +1,60 @@
+<app-navbar></app-navbar>
+<div class="container ">
+  <div class="row">
+    <div class="col-md-12">
+      <br>
+      <div class="card">
+
+        <div class="card-body">
+
+          <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+              <div class="flex gap-5 mt-10">
+                <div class="w-1/3">
+<!--                  <img src="https://static01.nyt.com/images/2017/01/23/upshot/24up-healthlongevity/24up-healthlongevity-articleLarge-v4.gif?quality=75&auto=webp&disable=upscale" >-->
+                  <video loading="lazy" muted="muted" src="https://cdnl.iconscout.com/lottie/premium/thumb/robotic-diagnostic-6359864-5240565.mp4" type="video/mp4" autoplay="autoplay" loop="loop"></video>
+                </div>
+                <div class=" w-2/3 ">
+                  <div class="message rounded-lg py-2 px-6 mb-4 text-center assistant bg-blue-100 border-blue-100  ">
+                    <span >Hello , im Tobi your medical assistant , feel free to ask me anything , and ill do my best to help you </span>
+                    <br>
+                    <br>
+                    <span class="text-xl"  >مرحبًا، أنا توبي مساعدك الطبي، لا تتردد في سؤالي عن أي شيء، وسأبذل قصارى جهدي لمساعدتك</span>
+                  </div>
+
+
+                    <div *ngFor="let item of chatConversation">
+                      <p class="card-text padding" [ngClass]="{'message': true, 'rounded-lg': true, 'py-2': true, 'px-6': true, 'mb-4': true, 'assistant': item.person === 'Tobi', 'user': item.person !== 'Tobi', 'bg-blue-100': item.person === 'Tobi', 'border-blue-100': item.person === 'Tobi', 'bg-green-200': item.person !== 'Tobi', 'border-green-200': item.person !== 'Tobi', 'self-start': item.person === 'Tobi', 'self-end': item.person !== 'Tobi'}">
+                        {{item.person}}: {{getText(item.response)}}
+                      </p>
+
+                  <div><img src="../../../../assets/images/ZNeT.gif" *ngIf="showSpinner" width="50px" height="50px"></div>
+
+                </div>
+                </div>
+              </div>
+
+              <br>
+              <div class="fixed inset-x-0 bottom-0 bg-gray-200">
+              <div  class="max-w-screen-lg m-auto w-full p-4 flex space-x-4 justify-center items-center" >
+              <input id="message" type="text" [(ngModel)]="promptText" autocomplete="off" class="border rounded-md p-2 flex-1 border-gray-300"  placeholder="Your message..." />
+
+
+              <br>
+              <button class="bg-gray-800 text-white px-4 py-2 rounded-md" (click)="checkResponse()" >Send</button>
+              </div>
+            </div>
+            </div>
+            <div class="col-md-2">
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

@@ -1,0 +1,102 @@
+<app-navbar></app-navbar>
+  <section class="">
+    <div class="container text-center">
+      <h2 class="heading"> Find a Doctor </h2>
+      <div class="max-w-[570px] mt-[30px] mx-auto bg-[#0066ff2c] rounded-md flex items-center justify-between">
+        <input type="search" class="py-4 pl-4 pr-2 bg-transparent w-full focus:outline-none cursor-pointer placeholder:text-textColor" placeholder="Search Doctor" [(ngModel)]="searchQuery">
+
+        <button class="btn mt-0 rounded-[0px] rounded-r-md">Search</button>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 ">
+        <div class="p-3 lg:p-5">
+          <div>
+          <img src="../../../../assets/images/doctor-img01.png" class="w-full" alt="">
+        </div>
+          <h2 class="text-[18px] leading-[30px] lg:text[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5">Dr. ram jr</h2>
+          <div class="mt-2 lg:mt-4 flex items-center justify-between">
+            <span class="bg-[#CCF0F3] text-irisBlueColor py-1 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">Surgeon</span>
+            <div class="flex items-center gap-[6px]">
+              <span class="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
+                <img src="../../../../assets/images/Star.png" alt="">4.8</span>
+              <span class="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">(272)</span>
+            </div>
+          </div>
+          <div class="mt-[18px] lg:mt-5 flex items-center justify-between"><div>
+            <h3 class="text-[16px] leading-7 lg:text-18px lg:leading-[30px] font-semibold text-headingColor">+ patients</h3>
+            <p class="text-[14px] leading-6 font-[400] text-textColor">atPune city Hospital, pune..</p>
+          </div>
+            <a class="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none" href="/doctors/1">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="group-hover:text-white w-6 h-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 lg:p-5">
+          <div><img src="../../../../assets/images/doctor-img02.png" class="w-full" alt=""></div>
+          <h2 class="text-[18px] leading-[30px] lg:text[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5">Dr.  AK ch</h2>
+          <div class="mt-2 lg:mt-4 flex items-center justify-between">
+            <span class="bg-[#CCF0F3] text-irisBlueColor py-1 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">Neurologist</span>
+            <div class="flex items-center gap-[6px]">
+              <span class="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor">
+              <img src="../../../../assets/images/Star.png" alt="">4.8</span><span class="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">(272)</span>
+            </div>
+          </div>
+          <div class="mt-[18px] lg:mt-5 flex items-center justify-between">
+            <div>
+              <h3 class="text-[16px] leading-7 lg:text-18px lg:leading-[30px] font-semibold text-headingColor">+ patients</h3>
+              <p class="text-[14px] leading-6 font-[400] text-textColor">atPune city Hospital, pune.</p>
+            </div>
+            <a class="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none" href="/doctors/1">
+              <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="group-hover:text-white w-6 h-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="p-3 lg:p-5">
+          <div>
+            <img src="../../../../assets/images/doctor-img03.png" class="w-full" alt="">
+          </div>
+          <h2 class="text-[18px] leading-[30px] lg:text[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5">Dr. abhishek shewale</h2>
+          <div class="mt-2 lg:mt-4 flex items-center justify-between">
+            <span class="bg-[#CCF0F3] text-irisBlueColor py-1 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">Dermatologist</span>
+            <div class="flex items-center gap-[6px]">
+              <span class="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor"><img src="../../../../assets/images/Star.png" alt="">4.8</span>
+              <span class="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">(272)</span>
+            </div>
+          </div>
+          <div class="mt-[18px] lg:mt-5 flex items-center justify-between">
+            <div>
+              <h3 class="text-[16px] leading-7 lg:text-18px lg:leading-[30px] font-semibold text-headingColor">+ patients</h3>
+              <p class="text-[14px] leading-6 font-[400] text-textColor">atPune city Hospital,  Sylhet.</p>
+            </div>
+            <a class="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none" href="/doctors/1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="group-hover:text-white w-6 h-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg>
+            </a>
+          </div>
+        </div>
+        <a href="/Doctor/{{doctor.id}}" *ngFor="let doctor of doctors | filter: searchQuery" class="p-3 lg:p-5">
+          <div>
+            <img src="{{doctor.image}}" style="width: 319px; height: 319px; object-fit: cover;" class="rounded-xl"  alt="">
+          </div>
+          <h2 class="text-[18px] leading-[30px] lg:text[26px] lg:leading-9 text-headingColor font-[700] mt-3 lg:mt-5">{{doctor.nom}}</h2>
+          <div class="mt-2 lg:mt-4 flex items-center justify-between">
+            <span class="bg-[#CCF0F3] text-irisBlueColor py-1 lg:py-2 lg:px-6 text-[12px] leading-4 lg:text-[16px] lg:leading-7 font-semibold rounded">{{doctor.specialite}}</span>
+            <div class="flex items-center gap-[6px]">
+              <span class="flex items-center gap-[6px] text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-semibold text-headingColor"><img src="../../../../assets/images/Star.png" alt="">4.8</span>
+              <span class="text-[14px] leading-6 lg:text-[16px] lg:leading-7 font-[400] text-textColor">(272)</span>
+            </div>
+          </div>
+          <div class="mt-[18px] lg:mt-5 flex items-center justify-between">
+            <div>
+              <h3 class="text-[16px] leading-7 lg:text-18px lg:leading-[30px] font-semibold text-headingColor">+ patients</h3>
+              <p class="text-[14px] leading-6 font-[400] text-textColor">{{doctor.hopital.nom}}</p>
+            </div>
+            <a class="w-[44px] h-[44px] rounded-full border border-solid border-[#181A1E] mt-[30px] mx-auto flex items-center justify-center group hover:bg-primaryColor hover:border-none" href="/doctors/1"><svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 16 16" class="group-hover:text-white w-6 h-5" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"></path></svg>
+            </a>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>

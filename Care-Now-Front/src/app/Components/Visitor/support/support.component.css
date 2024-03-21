@@ -1,0 +1,88 @@
+.push-right {
+  margin-left: 90%;
+}
+
+.person {
+  font-style: italic;
+  font-weight: bold;
+  color: purple;
+}
+
+.bot {
+  font-weight: bold;
+  color: darkgreen;
+}
+
+.frame-box {
+  border: dotted 2px orange;
+  padding: 20px;
+  min-height: 400px;
+  max-height: 400px;
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.message {
+  position: relative;
+}
+
+.message:after {
+  content: "";
+  top: 0;
+  position: absolute;
+  border: 0.75em solid transparent;
+  border-top-color: blue;
+  display: block;
+}
+.message.user:after {
+  right: -0.45em;
+  border-top-color: inherit;
+}
+.message.assistant:after {
+  left: -0.45em;
+  border-top-color: inherit;
+}
+
+.type-indicator span:nth-child(2) {
+  animation-delay: 150ms;
+}
+
+.type-indicator span:nth-child(3) {
+  animation-delay: 300ms;
+}
+
+@keyframes type-indicator {
+  0% {
+    transform: none;
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  50% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
+
+.blink {
+  animation: blink 1.25s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  69% {
+    opacity: 1;
+  }
+  70% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.padding{
+  padding: 5px;
+}

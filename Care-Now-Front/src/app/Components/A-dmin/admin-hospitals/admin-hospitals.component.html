@@ -1,0 +1,140 @@
+<app-admin-navbar></app-admin-navbar>
+<div class="bg-gray-200">
+  <div class="flex justify-center w-full mb-6">
+    <button
+      *ngIf="!showForm"
+      (click)="addHospital()"
+      class="transition ease-in duration-300 bg-blue-500 hover:bg-blue-600 text-white font-medium py-2 px-4 rounded-full"
+    >
+      + Add Hospital
+    </button>
+  </div>
+  <div *ngIf="showForm">
+    <div class="overlay fixed top-0 left-0 flex items-center justify-center h-screen w-screen bg-gray-500/70 z-50">
+      <div class="rounded-xl bg-gray-800 bg-opacity-50 px-16 py-10 shadow-lg backdrop-blur-md max-sm:px-8">
+        <div class="text-white">
+          <div class="mb-8 flex flex-col items-center">
+            <img src="./assets/AFLAS.png" width="150" alt="" srcset="" />
+
+          </div>
+
+          <form [formGroup]="hospitalForm" (ngSubmit)="onSubmit()">
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="nom" formControlName="nom" placeholder="Nom" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md"  type="text" id="adresse" formControlName="adresse" placeholder="adresse" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="telephone" formControlName="telephone" placeholder="telephone" />
+            </div>
+            <div class="mb-4 text-lg">
+
+              <input class="rounded-3xl border-none bg-yellow-400 bg-opacity-50 px-6 py-2 text-center text-inherit placeholder-slate-200 shadow-lg outline-none backdrop-blur-md" type="text" id="image" formControlName="image" placeholder="image" />
+            </div>
+
+
+            <div class="mt-8 flex justify-center text-lg text-black">
+              <button type="submit" class="rounded-3xl bg-yellow-400 bg-opacity-50 px-10 py-2 text-white shadow-xl backdrop-blur-md transition-colors duration-300 hover:bg-yellow-600">Add</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main class="w-full p-6 md:w-[calc(100%-256px)] md:ml-64 bg-gray-200 min-h-screen transition-all main">
+    <!-- component -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div>
+          <img class="object-center object-cover h-auto w-full" src="https://www.wsp.com/-/media/service/global/image/healthcare/engineering-humber-river-hospital.jpg" alt="photo">
+        </div>
+        <div class="text-center py-8 sm:py-6">
+          <p class="text-xl text-gray-700 font-bold mb-2">Best Hopital</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+
+        </div>
+        <div class="space-x-4 w-full py-4 bg-gray-100  text-center">
+          <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Delete</button>
+          <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Modify</button>
+        </div>
+      </div>
+      <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div>
+          <img class="object-center object-cover h-auto w-full" src="https://www.wsp.com/-/media/service/global/image/healthcare/engineering-humber-river-hospital.jpg" alt="photo">
+        </div>
+        <div class="text-center py-8 sm:py-6">
+          <p class="text-xl text-gray-700 font-bold mb-2">Best Hopital</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+
+        </div>
+        <div class="space-x-4 w-full py-4 bg-gray-100  text-center">
+          <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Delete</button>
+          <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Modify</button>
+        </div>
+      </div>
+      <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div>
+          <img class="object-center object-cover h-auto w-full" src="https://www.wsp.com/-/media/service/global/image/healthcare/engineering-humber-river-hospital.jpg" alt="photo">
+        </div>
+        <div class="text-center py-8 sm:py-6">
+          <p class="text-xl text-gray-700 font-bold mb-2">Best Hopital</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+
+        </div>
+        <div class="space-x-4 w-full py-4 bg-gray-100  text-center">
+          <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Delete</button>
+          <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Modify</button>
+        </div>
+      </div>
+      <div class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div>
+          <img class="object-center object-cover h-auto w-full" src="https://www.wsp.com/-/media/service/global/image/healthcare/engineering-humber-river-hospital.jpg" alt="photo">
+        </div>
+        <div class="text-center py-8 sm:py-6">
+          <p class="text-xl text-gray-700 font-bold mb-2">Best Hopital</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+          <p class="text-base text-gray-400 font-normal">Medical Services</p>
+
+        </div>
+        <div class="space-x-4 w-full py-4 bg-gray-100  text-center">
+          <button class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Delete</button>
+          <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Modify</button>
+        </div>
+      </div>
+      <div *ngFor="let hospital of hospitals" class="w-full bg-white rounded-lg sahdow-lg overflow-hidden flex flex-col justify-center items-center">
+        <div>
+          <img class="object-center object-cover h-auto w-full" src="{{hospital.image}}" style="object-fit: cover;" alt="photo">
+        </div>
+        <div class="text-center py-8 sm:py-6">
+          <p class="text-xl text-gray-700 font-bold mb-2">{{hospital.nom}}</p>
+          <p class="text-base text-gray-400 font-normal">{{hospital.adresse}}</p>
+          <p class="text-base text-gray-400 font-normal">{{hospital.telephone}}</p>
+          <p class="text-base text-gray-400 font-normal">Best Hospital</p>
+          <p class="text-base text-gray-400 font-normal">Welcome and welcome</p>
+
+        </div>
+        <div class="space-x-4 w-full py-4 bg-gray-100  text-center">
+          <button (click)="deletehospital(hospital.id)"  class="inline-block rounded-md bg-red-500 px-10 py-2 font-semibold text-red-100 shadow-md duration-75 hover:bg-red-400">Delete</button>
+
+          <button class="inline-block rounded-md bg-green-500 px-6 py-2 font-semibold text-green-100 shadow-md duration-75 hover:bg-green-400">Modify</button>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
